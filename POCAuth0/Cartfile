@@ -1,1 +1,2 @@
+github "auth0/Lock.swift" ~> 2.0
 github "auth0/Auth0.swift" ~> 1.0

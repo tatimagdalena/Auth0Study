@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1687399F20A1CB86002529F2 /* Lock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687399E20A1CB85002529F2 /* Lock.framework */; };
+		168739A120A1DD78002529F2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168739A020A1DD78002529F2 /* UIColor.swift */; };
 		41972FBE20A0C82E002384DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41972FBD20A0C82E002384DB /* AppDelegate.swift */; };
 		41972FC020A0C82E002384DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41972FBF20A0C82E002384DB /* ViewController.swift */; };
 		41972FC320A0C82E002384DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41972FC120A0C82E002384DB /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1687399E20A1CB85002529F2 /* Lock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lock.framework; path = Carthage/Build/iOS/Lock.framework; sourceTree = "<group>"; };
+		168739A020A1DD78002529F2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		41972FBA20A0C82E002384DB /* POCAuth0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCAuth0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41972FBD20A0C82E002384DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41972FBF20A0C82E002384DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1687399F20A1CB86002529F2 /* Lock.framework in Frameworks */,
 				41972FF020A0D57C002384DB /* Auth0.framework in Frameworks */,
 				41972FF220A0D689002384DB /* SimpleKeychain.framework in Frameworks */,
 			);
@@ -109,6 +114,7 @@
 				41972FBD20A0C82E002384DB /* AppDelegate.swift */,
 				41972FBF20A0C82E002384DB /* ViewController.swift */,
 				41972FC120A0C82E002384DB /* Main.storyboard */,
+				168739A020A1DD78002529F2 /* UIColor.swift */,
 				41972FC420A0C832002384DB /* Assets.xcassets */,
 				41972FC620A0C832002384DB /* LaunchScreen.storyboard */,
 				41972FC920A0C832002384DB /* Info.plist */,
@@ -138,6 +144,7 @@
 		41972FEE20A0D57C002384DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1687399E20A1CB85002529F2 /* Lock.framework */,
 				41972FF120A0D689002384DB /* SimpleKeychain.framework */,
 				41972FEF20A0D57C002384DB /* Auth0.framework */,
 			);
@@ -281,6 +288,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Auth0.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SimpleKeychain.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lock.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
@@ -297,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41972FC020A0C82E002384DB /* ViewController.swift in Sources */,
+				168739A120A1DD78002529F2 /* UIColor.swift in Sources */,
 				41972FBE20A0C82E002384DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

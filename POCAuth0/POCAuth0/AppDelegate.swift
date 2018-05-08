@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Auth0
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,11 +19,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        print(url.absoluteString)
-        return Auth0.resumeAuth(url, options: options)
-    }
-
-
 }
-
