@@ -8,7 +8,6 @@
 
 import UIKit
 class ViewController: UIViewController {
-    
     var authentication: AuthenticationProtocol!
     
     // MARK: - Lifecycle -
@@ -24,15 +23,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openAuth0(_ sender: UIButton) {
-        
         if authentication.hasValidCredentials() {
             authentication.retrieveCredentials()
         } else {
             authentication.presentLoginPage(from: self)
         }
-        
     }
-    
-    
 }
-

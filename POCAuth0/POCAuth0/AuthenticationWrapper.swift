@@ -19,7 +19,7 @@ protocol AuthenticationProtocol {
     
 }
 
-class Auth0Wrapper: AuthenticationProtocol {
+class LockWrapper: AuthenticationProtocol {
     
     let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     
