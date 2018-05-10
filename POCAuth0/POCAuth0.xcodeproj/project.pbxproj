@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1687399F20A1CB86002529F2 /* Lock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687399E20A1CB85002529F2 /* Lock.framework */; };
 		168739A120A1DD78002529F2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168739A020A1DD78002529F2 /* UIColor.swift */; };
+		168739A320A1F008002529F2 /* AuthenticationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168739A220A1F008002529F2 /* AuthenticationWrapper.swift */; };
 		41972FBE20A0C82E002384DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41972FBD20A0C82E002384DB /* AppDelegate.swift */; };
 		41972FC020A0C82E002384DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41972FBF20A0C82E002384DB /* ViewController.swift */; };
 		41972FC320A0C82E002384DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41972FC120A0C82E002384DB /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1687399E20A1CB85002529F2 /* Lock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lock.framework; path = Carthage/Build/iOS/Lock.framework; sourceTree = "<group>"; };
 		168739A020A1DD78002529F2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		168739A220A1F008002529F2 /* AuthenticationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWrapper.swift; sourceTree = "<group>"; };
 		41972FBA20A0C82E002384DB /* POCAuth0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCAuth0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41972FBD20A0C82E002384DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41972FBF20A0C82E002384DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				41972FBD20A0C82E002384DB /* AppDelegate.swift */,
 				41972FBF20A0C82E002384DB /* ViewController.swift */,
+				168739A220A1F008002529F2 /* AuthenticationWrapper.swift */,
 				41972FC120A0C82E002384DB /* Main.storyboard */,
 				168739A020A1DD78002529F2 /* UIColor.swift */,
 				41972FC420A0C832002384DB /* Assets.xcassets */,
@@ -307,6 +310,7 @@
 				41972FC020A0C82E002384DB /* ViewController.swift in Sources */,
 				168739A120A1DD78002529F2 /* UIColor.swift in Sources */,
 				41972FBE20A0C82E002384DB /* AppDelegate.swift in Sources */,
+				168739A320A1F008002529F2 /* AuthenticationWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
