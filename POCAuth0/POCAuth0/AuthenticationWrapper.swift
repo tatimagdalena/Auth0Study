@@ -6,21 +6,17 @@
 //  Copyright © 2018 Tatiana Magdalena. All rights reserved.
 //
 
-import Foundation
-import Lock
 import Auth0
+import UIKit
 
 protocol AuthenticationProtocol {
-    
     func retrieveCredentials()
     func presentLoginPage(from presenter: UIViewController)
     func hasValidCredentials() -> Bool
     func logout()
-    
 }
 
 class Auth0Wrapper: AuthenticationProtocol {
-    
     let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     
     var credentials: Credentials?
@@ -40,32 +36,21 @@ class Auth0Wrapper: AuthenticationProtocol {
     }
     
     func presentLoginPage(from presenter: UIViewController) {
-        
-        Lock
-            .classic()
-            // withConnections, withOptions, withStyle, and so on
-            .withOptions {
-                $0.logLevel = .all
-                $0.logHttpRequest = true
-                $0.oidcConformant = true
-                $0.scope = "openid profile offline_access"
-                $0.closable = true
-                $0.passwordManager.enabled = false
+        Auth0
+            .webAuth()
+            .scope("openid profile offline_access")
+            .audience("https://tatimagdalena.auth0.com/userinfo")
+            .start {
+                switch $0 {
+                case .failure(let error):
+                    // Handle the error
+                    print("Error: \(error)")
+                case .success(let credentials):
+                    // Do something with credentials e.g.: save them.
+                    // Auth0 will automatically dismiss the login page
+                    self.saveToKeychain(credentials: credentials)
+                }
             }
-            .withStyle {
-                $0.title = "Company LLC"
-                $0.logo = LazyImage(name: "logo_placeholder")
-                $0.primaryColor = Color.brandbookPalette.midDarkGreen
-                $0.headerBlur = .extraLight
-            }
-            .onAuth { credentials in
-                // Let's save our credentials.accessToken value
-                self.saveToKeychain(credentials: credentials)
-            }
-            .onError { error in
-                print("❗️ Error: \(error)")
-            }
-            .present(from: presenter)
     }
     
     func hasValidCredentials() -> Bool {
@@ -76,7 +61,7 @@ class Auth0Wrapper: AuthenticationProtocol {
         let result = credentialsManager.clear()
         print("📝 ❔ Logout successfull? \(result)")
     }
-
+    
     private func saveToKeychain(credentials: Credentials) {
         printCredentials(credentials)
         let result = self.credentialsManager.store(credentials: credentials)
@@ -90,5 +75,4 @@ class Auth0Wrapper: AuthenticationProtocol {
         print("Expires in: \(String(describing: credentials.expiresIn))")
         print("Refresh token: \(credentials.refreshToken ?? "")")
     }
-    
 }
