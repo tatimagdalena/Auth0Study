@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        viewController.authentication = Auth0Wrapper()
+        viewController.authentication = LockWrapper()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         
